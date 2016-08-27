@@ -1,12 +1,27 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
-@charset "utf-8";
+@charset 'utf-8';
 
 
+// Brand Colors
+// https://coolors.co/373f51-008dd5-db5461-071013-f7f7ff
+$color1: #008DD5; // Rich Electric Blue
+$color2: #DB5461; // Dark Terra Cotta
+$color3: #373F51; // Charcoal
+$color4: #071013; // Rich Black
+$color5: #F7F7FF; // Ghost White
+
+// Fonts
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i|Work+Sans:300';
 
 // Our variables
-$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$heading-font-family: 'Work Sans', sans-serif;
+$heading-font-weight: 300;
+
+
+$base-font-family: 'Open Sans', sans-serif;
 $base-font-size:   16px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
@@ -32,6 +47,7 @@ $medium:         900px;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-  "base",
-  "layout"
+  'base',
+  'layout',
+  'pages'
 ;
