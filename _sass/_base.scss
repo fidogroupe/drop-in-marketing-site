@@ -59,21 +59,38 @@ p {
   font-size: 15px;
 }
 
-label {
+label,
+button {
   line-height: 22px;
   font-size: 13px;
 }
 
-/**
-* Links
-*/
-a {
-  color: $brand-color;
-  text-decoration: none;
 
-  &:visited {
-    color: darken($brand-color, 15%);
+
+/**
+* Buttons
+*/
+button {
+  transition: box-shadow $ui-transition-speed ease-in-out;
+  margin: 10px;
+  border-color: transparent;
+  box-shadow: $color4 0 0 0;
+  background-color: $color2;
+  padding: 5px 25px;
+  overflow: visible;
+  text-transform: uppercase;
+  color: $color5;
+  font-family: $base-font-family;
+
+  &:hover {
+    transition: box-shadow $ui-transition-speed ease-in-out;
+    box-shadow: $color4 0 0 2px;
   }
+}
+
+[data-button='action'] {
+  background-color: $color2;
+}
 
   &:hover {
     color: $text-color;
