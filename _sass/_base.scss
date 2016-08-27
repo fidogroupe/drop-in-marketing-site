@@ -92,9 +92,18 @@ button {
   background-color: $color2;
 }
 
+/**
+* Links
+*/
+a:not([data-link='no-style']) {
+  transition: border-bottom $ui-transition-speed ease-in-out;
+  border-bottom: 1px solid currentColor;
+  text-decoration: none;
+  color: inherit;
+
   &:hover {
-    color: $text-color;
-    text-decoration: underline;
+    transition: border-bottom $ui-transition-speed ease-in-out;
+    border-bottom: 1px solid $color2;
   }
 }
 
