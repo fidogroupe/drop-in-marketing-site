@@ -4,8 +4,8 @@
 * Basic styling
 */
 body {
-  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
   color: $text-color;
+  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
 }
 
 
@@ -15,9 +15,14 @@ figcaption {
 
 
 /**
-* Headings
+* Typography
 */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: $heading-font-family;
   font-weight: $heading-font-weight;
 }
@@ -45,8 +50,8 @@ h4 {
 
 strong {
   line-height: 24px;
-  font-weight: 700;
   font-size: 15px;
+  font-weight: 700;
 }
 
 p {
