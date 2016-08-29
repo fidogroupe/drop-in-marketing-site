@@ -233,6 +233,10 @@ blockquote {
 
     @media (min-width: $small) {
       display: inline-block;
+
+      &:hover {
+        color: $color1;
+      }
     }
   }
 }
