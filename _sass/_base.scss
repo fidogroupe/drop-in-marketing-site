@@ -145,6 +145,34 @@ blockquote {
   position: relative;
   margin: auto;
 
+  nav {
+    @media (min-width: $small) {
+      @include clearfix;
+      transition: background-color $ui-transition-speed;
+      background-color: transparent;
+
+      &:hover {
+        //scss-lint:disable NestingDepth
+        transition: background-color $ui-transition-speed;
+        background-color: $color3;
+
+        .site-header--links {
+          transition: opacity $ui-transition-speed;
+          opacity: 1;
+        }
+        //scss-lint:enable NestingDepth
+      }
+
+      .site-header--links {
+        transition: opacity $ui-transition-speed;
+        opacity: 0;
+      }
+
+
+
+    }
+  }
+
   a {
     text-decoration: none;
     color: $color5;
@@ -153,50 +181,75 @@ blockquote {
   h1 {
     margin: 0;
     padding: 10px 20px;
+
+    @media (min-width: $small) {
+      float: left;
+    }
   }
 }
 
 .site-header--links {
-  position: absolute;
-  transform: translateX(-100%);
-  transition: transform $ui-transition-speed ease-in-out;
   z-index: 1;
   margin: 0;
-  background-color: $color3;
   padding: 0;
-  width: 100%;
+
   list-style: none;
   color: $color1;
 
-  &[data-state='active'] {
-    transform: translate(0);
+  @media (max-width: #{$small - 1}) {
+    position: absolute;
+    transform: translateX(-100%);
     transition: transform $ui-transition-speed ease-in-out;
+    background-color: $color3;
+    width: 100%;
+  }
+
+  @media (min-width: $small) {
+    float: right;
+    padding: 10px 20px;
+  }
+
+  &[data-state='active'] {
+    @media (max-width: #{$small - 1}) {
+      transform: translate(0);
+      transition: transform $ui-transition-speed ease-in-out;
+    }
   }
 
   li {
     padding: 14px 20px;
   }
 
-  a {
-    display: block;
-    border-bottom: 1px solid $color1;
-  }
 
-  a:last-of-type {
-    border: 0;
+  a {
+    @media (max-width: #{$small - 1}) {
+      display: block;
+      border-bottom: 1px solid $color1;
+
+      &:last-of-type {
+        border: 0;
+      }
+    }
+
+    @media (min-width: $small) {
+      display: inline-block;
+    }
   }
 }
 
 .site-header--menu {
   display: inline-block;
   position: relative;
-  top: -67px;
   float: right;
   margin: 25px 30px 0;
-  cursor: pointer;
   padding-top: 18px;
   width: 25px;
   height: 18px;
+
+  @media (max-width: #{$small - 1}) {
+    top: -67px;
+    cursor: pointer;
+  }
 
   .menu--bar {
     display: block;
@@ -223,25 +276,27 @@ blockquote {
     top: 14px;
   }
 
-  &[data-state='active'] {
-    .menu--bar:nth-child(1) {
-      top: 7px;
-      left: 50%;
-      width: 0%;
-    }
+  @media (max-width: #{$small - 1}) {
+    &[data-state='active'] {
+      .menu--bar:nth-child(1) {
+        top: 7px;
+        left: 50%;
+        width: 0%;
+      }
 
-    .menu--bar:nth-child(2) {
-      transform: rotate(45deg);
-    }
+      .menu--bar:nth-child(2) {
+        transform: rotate(45deg);
+      }
 
-    .menu--bar:nth-child(3) {
-      transform: rotate(-45deg);
-    }
+      .menu--bar:nth-child(3) {
+        transform: rotate(-45deg);
+      }
 
-    .menu--bar:nth-child(4) {
-      top: 7px;
-      left: 50%;
-      width: 0%;
+      .menu--bar:nth-child(4) {
+        top: 7px;
+        left: 50%;
+        width: 0%;
+      }
     }
   }
 }
