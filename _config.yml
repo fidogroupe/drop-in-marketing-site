@@ -2,7 +2,7 @@
 title: REPLACE_ME
 email: REPLACE_ME
 description: REPLACE_M
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/drop-in-marketing-site" # the subpath of your site, e.g. /blog
 url: "REPLACE_ME" # the base hostname & protocol for your site
 
 # Build settings
