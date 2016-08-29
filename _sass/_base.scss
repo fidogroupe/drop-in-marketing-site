@@ -130,7 +130,7 @@ blockquote {
 /**
 * Clearfix
 */
-%clearfix {
+@mixin clearfix {
   &::after {
     display: table;
     clear: both;
