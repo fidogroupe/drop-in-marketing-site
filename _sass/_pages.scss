@@ -6,3 +6,20 @@
 .partners-page {
   background-color: $color4;
 }
+
+
+// For style representation
+.style-page {
+  background-color: $color1;
+
+  main {
+    ul {
+      margin-left: 0;
+      list-style: none;
+
+      li {
+        border-bottom: 1px $color4 solid;
+      }
+    }
+  }
+}
