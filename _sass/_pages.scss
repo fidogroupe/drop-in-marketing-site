@@ -1,4 +1,50 @@
-.home-page,
+.home-page {
+  background-color: $color1;
+}
+
+@keyframes fadeSportsList {
+  0% {opacity: 0}
+  25% {opacity: 1}
+  50% {opacity: 0}
+  100% {opacity: 0}
+}
+
+@keyframes fadeMottoIn {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+
+.homepage-hero--copy {
+  span {
+    position: absolute;
+    margin-left: 8px; // for letter spacing
+    opacity: 0;
+
+    &:nth-of-type(1) {
+      animation: fadeSportsList 6s ease-in-out;
+      animation-iteration-count: 1;
+    }
+
+    &:nth-of-type(2) {
+      animation: fadeSportsList 6s ease-in-out;
+      animation-delay: 2s;
+      animation-iteration-count: 1;
+    }
+
+    &:nth-of-type(3) {
+      animation: fadeSportsList 6s ease-in-out;
+      animation-delay: 4s;
+      animation-iteration-count: 1;
+    }
+
+    &:last-of-type {
+      animation: fadeMottoIn 2s forwards;
+      animation-delay: 6s;
+    }
+  }
+}
+
+
 .contact-page {
   background-color: $color1;
 }
