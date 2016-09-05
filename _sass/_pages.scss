@@ -14,7 +14,13 @@
   100% {opacity: 1}
 }
 
-.homepage-hero--copy {
+.home-page-hero {
+  p {
+    margin-top: $spacing-unit;
+  }
+}
+
+.home-page-hero--heading {
   span {
     position: absolute;
     margin-left: 8px; // for letter spacing
@@ -40,6 +46,11 @@
     &:last-of-type {
       animation: fadeMottoIn 2s forwards;
       animation-delay: 6s;
+
+      @media (max-width: $small - 1) {
+        display: block;
+        margin-left: 0;
+      }
     }
   }
 }
