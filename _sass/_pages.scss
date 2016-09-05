@@ -44,6 +44,15 @@
   }
 }
 
+[class^='sports-highlight--'] {
+  float: left;
+  width: calc(100% / 3 - (20px / 3));
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
 
 .contact-page {
   background-color: $color1;
