@@ -1,5 +1,15 @@
 .home-page {
   background-color: $color1;
+
+  [data-wrap='container'] {
+    @media (min-width: $small) {
+      padding-right: 300px;
+    }
+
+    @media (min-width: $medium) {
+      padding-right: 500px;
+    }
+  }
 }
 
 @keyframes fadeSportsList {
@@ -55,14 +65,24 @@
   }
 }
 
-@media (min-width: $small) {
-  [class^='sports-highlight--'] {
-    float: left;
-    width: calc(100% / 3 - (20px / 3));
+.iphone-image {
+  display: none;
 
-    &:not(:last-child) {
-      margin-right: 10px;
-    }
+  @media (min-width: $small) {
+    display: block;
+    position: fixed;
+    top: 150px;
+    right: 70px;
+    width: 200px;
+  }
+
+  @media (min-width: $medium) {
+    right: 150px;
+    width: 350px;
+  }
+
+  @media (min-width: 1500px) {
+    right: 350px;
   }
 }
 
