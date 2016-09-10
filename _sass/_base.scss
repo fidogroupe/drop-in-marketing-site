@@ -167,12 +167,11 @@ a:not([data-link='no-style']) {
     color: $color5;
   }
 
-  h1 {
-    margin: 0;
-    padding: 10px 20px;
+  .site-header--logo {
 
-    @media (min-width: $small) {
-      float: left;
+    img {
+      margin: 11px 20px 10px;
+      height: 50px;
     }
   }
 }
@@ -240,7 +239,6 @@ a:not([data-link='no-style']) {
   height: 18px;
 
   @media (max-width: #{$small - 1}) {
-    top: -67px;
     cursor: pointer;
   }
 
