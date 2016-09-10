@@ -69,7 +69,7 @@ small {
 
 
 /**
-* Buttons
+* Forms
 */
 button {
   transition: box-shadow $ui-transition-speed ease-in-out;
@@ -91,6 +91,15 @@ button {
 
 [data-button='action'] {
   background-color: $color2;
+}
+
+input {
+  margin-top: 10px;
+  padding: 8px 5px;
+}
+
+label {
+  margin: 10px;
 }
 
 /**
@@ -123,6 +132,7 @@ a:not([data-link='no-style']) {
 
 // Navigation
 .site-header {
+  @include clearfix;
   display: block;
   position: relative;
   margin: auto;
@@ -149,9 +159,6 @@ a:not([data-link='no-style']) {
         transition: opacity $ui-transition-speed;
         opacity: 0;
       }
-
-
-
     }
   }
 

@@ -1,0 +1,27 @@
+.subscribe-form {
+  @include clearfix;
+
+  label,
+  input {
+    display: block;
+  }
+
+  [class^='subscribe-form--'] {
+    float: left;
+  }
+
+  .subscribe-form--zip {
+    span {
+      font-style: italic;
+    }
+  }
+
+  .subscribe-form--submit {
+    padding-top: 30px;
+
+    button {
+      // Overwrite the default so it matches the width of the text inputs
+      padding: 5px 34px;
+    }
+  }
+}
