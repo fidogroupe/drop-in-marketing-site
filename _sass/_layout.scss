@@ -21,4 +21,18 @@ section {
 [data-wrap='container'] {
   margin: 30px auto;
   padding: 0 20px;
+  width: $small - 20px;
+
+  @media (min-width: $medium) {
+    width: $medium - 20px;
+  }
+
+  @media (min-width: $large) {
+    width: $large - 20px;
+  }
+
+  @media (min-width: $wide) {
+    width: $wide - 20px;
+  }
+
 }
