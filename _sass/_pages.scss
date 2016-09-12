@@ -92,6 +92,10 @@
 
 [class^='feature-']:not([class^='feature--']) {
   margin: $spacing-unit * 2 auto;
+
+  @media (min-width: $large) {
+    padding: 200px 0;
+  }
 }
 
 .feature--copy {
