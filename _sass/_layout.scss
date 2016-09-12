@@ -30,9 +30,4 @@ section {
   @media (min-width: $large) {
     width: $large - 20px;
   }
-
-  @media (min-width: $wide) {
-    width: $wide - 20px;
-  }
-
 }
