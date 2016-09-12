@@ -86,6 +86,89 @@
   }
 }
 
+[class^='feature-']:not([class^='feature--']) {
+  margin: $spacing-unit * 2 auto;
+}
+
+.feature--screen {
+  @media (max-width: $medium - 1) {
+    padding: $spacing-unit 0;
+  }
+
+  @media (min-width: $medium) {
+    max-width: 300px;
+  }
+}
+
+@media (min-width: $medium) and (max-width: $large - 1) {
+  .feature-filter {
+    .feature--copy {
+      float: left;
+      width: calc(60% - #{$spacing-unit});
+      text-align: right;
+    }
+
+    .feature--screen {
+      float: right;
+      padding-top: 11px;
+      width: calc(40% - #{$spacing-unit});
+    }
+  }
+
+  .feature-create {
+    .feature--copy {
+      float: right;
+      width: calc(60% - #{$spacing-unit});
+    }
+
+    .feature--screen {
+      float: left;
+      padding-top: 58px;
+      width: calc(40% - #{$spacing-unit});
+    }
+  }
+
+  .feature-comment {
+    .feature--copy {
+      float: left;
+      padding-top: 22px;
+      width: calc(60% - #{$spacing-unit});
+      text-align: right;
+    }
+
+    .feature--screen {
+      float: right;
+      width: calc(40% - #{$spacing-unit});
+    }
+  }
+
+  .feature-profile {
+    .feature--copy {
+      float: right;
+      padding-top: 33px;
+      width: calc(60% - #{$spacing-unit});
+    }
+
+    .feature--screen {
+      float: left;
+      width: calc(40% - #{$spacing-unit});
+    }
+  }
+
+  .feature-friends {
+    .feature--copy {
+      float: left;
+      padding-top: 40px;
+      width: calc(60% - #{$spacing-unit});
+      text-align: right;
+    }
+
+    .feature--screen {
+      float: right;
+      width: calc(40% - #{$spacing-unit});
+    }
+  }
+}
 
 .contact-page {
   background-color: $color1;
