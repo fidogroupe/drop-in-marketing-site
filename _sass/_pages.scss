@@ -57,7 +57,7 @@
       animation: fadeMottoIn 2s forwards;
       animation-delay: 6s;
 
-      @media (max-width: $small - 1) {
+      @media (max-width: $medium - 1) {
         display: block;
         margin-left: 0;
       }
@@ -68,7 +68,7 @@
 .iphone-image {
   display: none;
 
-  @media (min-width: $small) {
+  @media (min-width: $medium) {
     display: block;
     position: fixed;
     top: 150px;
@@ -76,7 +76,7 @@
     width: 200px;
   }
 
-  @media (min-width: $medium) {
+  @media (min-width: $large) {
     right: 150px;
     width: 350px;
   }

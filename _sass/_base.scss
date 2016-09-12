@@ -138,7 +138,7 @@ a:not([data-link='no-style']) {
   margin: auto;
 
   nav {
-    @media (min-width: $small) {
+    @media (min-width: $medium) {
       @include clearfix;
       transition: background-color $ui-transition-speed;
       background-color: transparent;
@@ -184,7 +184,7 @@ a:not([data-link='no-style']) {
   list-style: none;
   color: $color1;
 
-  @media (max-width: #{$small - 1}) {
+  @media (max-width: #{$medium - 1}) {
     position: absolute;
     transform: translateX(-100%);
     transition: transform $ui-transition-speed ease-in-out;
@@ -192,13 +192,13 @@ a:not([data-link='no-style']) {
     width: 100%;
   }
 
-  @media (min-width: $small) {
+  @media (min-width: $medium) {
     float: right;
     padding: 10px 20px;
   }
 
   &[data-state='active'] {
-    @media (max-width: #{$small - 1}) {
+    @media (max-width: #{$medium - 1}) {
       transform: translate(0);
       transition: transform $ui-transition-speed ease-in-out;
     }
@@ -210,7 +210,7 @@ a:not([data-link='no-style']) {
 
 
   a {
-    @media (max-width: #{$small - 1}) {
+    @media (max-width: #{$medium - 1}) {
       display: block;
       border-bottom: 1px solid $color1;
 
@@ -219,7 +219,7 @@ a:not([data-link='no-style']) {
       }
     }
 
-    @media (min-width: $small) {
+    @media (min-width: $medium) {
       display: inline-block;
 
       &:hover {
@@ -238,7 +238,7 @@ a:not([data-link='no-style']) {
   width: 25px;
   height: 18px;
 
-  @media (max-width: #{$small - 1}) {
+  @media (max-width: #{$medium - 1}) {
     cursor: pointer;
   }
 
@@ -267,7 +267,7 @@ a:not([data-link='no-style']) {
     top: 14px;
   }
 
-  @media (max-width: #{$small - 1}) {
+  @media (max-width: #{$medium - 1}) {
     &[data-state='active'] {
       .menu--bar:nth-child(1) {
         top: 7px;
