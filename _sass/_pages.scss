@@ -184,6 +184,12 @@
   }
 }
 
+.sports-highlights {
+  @media (min-width: $large) {
+    margin-top: $spacing-unit * 4;
+  }
+}
+
 .contact-page {
   background-color: $color1;
 }
