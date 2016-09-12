@@ -1,15 +1,5 @@
 .home-page {
   background-color: $color1;
-
-  [data-wrap='container'] {
-    @media (min-width: $small) {
-      padding-right: 300px;
-    }
-
-    @media (min-width: $medium) {
-      padding-right: 500px;
-    }
-  }
 }
 
 @keyframes fadeSportsList {
@@ -81,29 +71,33 @@
   }
 }
 
-.iphone-image {
+.iphone-image-container {
   display: none;
 
-  @media (min-width: $medium) {
+  @media (min-width: $large) {
     display: block;
     position: fixed;
-    top: 150px;
-    right: 70px;
-    width: 200px;
-  }
+    top: 100px;
+    left: 50%;
+    margin-left: - ($large - 20px) / 2;
+    padding: 0 20px;
+    width: $large - 20px;
 
-  @media (min-width: $large) {
-    right: 150px;
-    width: 350px;
-  }
-
-  @media (min-width: 1500px) {
-    right: 350px;
+    img {
+      float: right;
+      width: 300px;
+    }
   }
 }
 
 [class^='feature-']:not([class^='feature--']) {
   margin: $spacing-unit * 2 auto;
+}
+
+.feature--copy {
+  @media (min-width: $large) {
+    width: 510px;
+  }
 }
 
 .feature--screen {
@@ -113,6 +107,10 @@
 
   @media (min-width: $medium) {
     max-width: 300px;
+  }
+
+  @media (min-width: $large) {
+    opacity: 0;
   }
 }
 
