@@ -85,7 +85,14 @@
 
     img {
       float: right;
+      transition: opacity $iphone-transition-speed ease-in-out;
+      opacity: 0;
       width: 300px;
+
+      &[data-state='active'] {
+        transition: opacity $iphone-transition-speed ease-in-out;
+        opacity: 1;
+      }
     }
   }
 }
@@ -114,7 +121,17 @@
   }
 
   @media (min-width: $large) {
+    position: fixed;
+    top: 176px;
+    transition: opacity $iphone-transition-speed ease-in-out;
     opacity: 0;
+    margin-left: 577px;
+    width: 266px;
+
+    &[data-feature-focus='true'] {
+      transition: opacity $iphone-transition-speed ease-in-out;
+      opacity: 1;
+    }
   }
 }
 
