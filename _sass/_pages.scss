@@ -25,6 +25,22 @@
 }
 
 .home-page-hero {
+  background-image: url('../images/hero-background.jpg');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+
+  @media (min-width: $medium) {
+    height: 500px;
+  }
+
+  h1,
+  h3 {
+    box-shadow: $color4 0 0 2px;
+    background-color: $color1;
+    padding: $spacing-unit / 2;
+  }
+
   h3 {
     margin-top: $spacing-unit * 2;
   }
