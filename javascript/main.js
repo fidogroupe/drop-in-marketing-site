@@ -33,10 +33,7 @@ headerMenu.onclick = function() {
 
 
 $(window).scroll(function() {
-  console.log($('.home-page').offset().top - $(window).scrollTop());
-
   var fromTop = $('.home-page').offset().top - $(window).scrollTop();
-  $('.home-page').offset().top - $(window).scrollTop()
 
   if (fromTop <= feature1Start && fromTop >= feature5End) {
     $('.js-iphone-image').attr('data-state', 'active');
