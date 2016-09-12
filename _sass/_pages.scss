@@ -101,7 +101,7 @@
   margin: $spacing-unit * 2 auto;
 
   @media (min-width: $large) {
-    padding: 200px 0;
+    padding: 200px 20px;
   }
 }
 
@@ -125,7 +125,7 @@
     top: 176px;
     transition: opacity $iphone-transition-speed ease-in-out;
     opacity: 0;
-    margin-left: 577px;
+    margin-left: 557px;
     width: 266px;
 
     &[data-feature-focus='true'] {
