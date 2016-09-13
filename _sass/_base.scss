@@ -137,23 +137,26 @@ a:not([data-link='no-style']) {
   position: relative;
   margin: auto;
 
+  @media (min-width: $medium) {
+    transition: background-color $ui-transition-speed;
+    background-color: transparent;
+
+    &:hover {
+      transition: background-color $ui-transition-speed;
+      background-color: $color3;
+
+      .site-header--links {
+        transition: opacity $ui-transition-speed;
+        opacity: 1;
+      }
+    }
+  }
+
   nav {
     @media (min-width: $medium) {
       @include clearfix;
-      transition: background-color $ui-transition-speed;
-      background-color: transparent;
-
-      &:hover {
-        //scss-lint:disable NestingDepth
-        transition: background-color $ui-transition-speed;
-        background-color: $color3;
-
-        .site-header--links {
-          transition: opacity $ui-transition-speed;
-          opacity: 1;
-        }
-        //scss-lint:enable NestingDepth
-      }
+      margin: auto;
+      max-width: 900px;
 
       .site-header--links {
         transition: opacity $ui-transition-speed;
