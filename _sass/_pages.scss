@@ -104,10 +104,9 @@
     display: block;
     position: fixed;
     top: 100px;
-    left: 50%;
-    margin-left: - ($large - 20px) / 2;
+    right: 50%;
+    margin-right: - ($large - 20px) / 2;
     padding: 0 20px;
-    width: $large - 20px;
 
     img {
       float: right;
