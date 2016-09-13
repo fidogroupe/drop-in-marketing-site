@@ -27,8 +27,8 @@ headerMenu.onclick = function() {
   var feature3Start   = parseFloat(-1755);
   var feature3End     = parseFloat(-2378) - 100;
   var feature4Start   = parseFloat(-2378);
-  var feature4End     = parseFloat(-3189) - 100;
-  var feature5Start   = parseFloat(-3189);
+  var feature4End     = parseFloat(-2989) - 100;
+  var feature5Start   = parseFloat(-2989);
   var feature5End     = parseFloat(-3480);
 
 
