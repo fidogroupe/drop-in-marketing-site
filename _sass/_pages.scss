@@ -14,6 +14,11 @@
   100% {opacity: 1;}
 }
 
+@keyframes fadeNameOut {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
 .home-page-hero {
   background-image: url('../images/hero-background.jpg');
   background-repeat: no-repeat;
@@ -32,28 +37,53 @@
   }
 
   h3 {
-    margin-top: $spacing-unit * 2;
+    @media (max-width: $large - 1) {
+      margin-top: $spacing-unit * 2;
+    }
+
+    @media (min-width: $medium) {
+      width: 520px;
+    }
+  }
+
+  [data-wrap='container'] {
+    padding: 0;
   }
 }
 
 .home-page-hero--heading {
+  height: 75px;
+
+  @media (min-width: $medium) {
+    width: 285px;
+  }
+
   span {
     position: absolute;
     opacity: 0;
-    margin-left: 8px; // for letter spacing
+    margin-left: 110px;
 
     &:nth-of-type(1) {
+      animation: fadeNameOut 1.5s ease-in-out;
+      animation-delay: 5.5s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      opacity: 1;
+      margin-left: 0;
+    }
+
+    &:nth-of-type(2) {
       animation: fadeSportsList 6s ease-in-out;
       animation-iteration-count: 1;
     }
 
-    &:nth-of-type(2) {
+    &:nth-of-type(3) {
       animation: fadeSportsList 6s ease-in-out;
       animation-delay: 2s;
       animation-iteration-count: 1;
     }
 
-    &:nth-of-type(3) {
+    &:nth-of-type(4) {
       animation: fadeSportsList 6s ease-in-out;
       animation-delay: 4s;
       animation-iteration-count: 1;
@@ -62,11 +92,7 @@
     &:last-of-type {
       animation: fadeMottoIn 2s forwards;
       animation-delay: 6s;
-
-      @media (max-width: $medium - 1) {
-        display: block;
-        margin-left: 0;
-      }
+      margin-left: 0;
     }
   }
 }
