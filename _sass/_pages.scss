@@ -206,8 +206,37 @@
 }
 
 .sports-highlights {
+
+  @media (min-width: $medium) {
+    text-align: center;
+  }
+
   @media (min-width: $large) {
     margin-top: $spacing-unit * 8;
+  }
+
+  [class^='sports-highlight--'] {
+    @media (min-width: $large) {
+      float: left;
+      margin: auto $spacing-unit / 2;
+      width: calc((100% / 3) - #{$spacing-unit});
+    }
+  }
+
+  [class^='highlight-icon--'] {
+    margin: $spacing-unit auto;
+    background-color: $color5;
+    height: 200px;
+    text-align: center;
+    line-height: 200px;
+
+    svg {
+      vertical-align: middle;
+    }
+
+    .sports-svg {
+      fill: $color1;
+    }
   }
 }
 
