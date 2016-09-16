@@ -1,7 +1,5 @@
 # Site settings
-title: REPLACE_ME
-email: REPLACE_ME
-description: REPLACE_ME
+title: Drop In
 baseurl: "/drop-in-marketing-site" # the subpath of your site, e.g. /blog
 url: "REPLACE_ME" # the base hostname & protocol for your site
 
