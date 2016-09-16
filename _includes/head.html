@@ -5,8 +5,8 @@
 
   {% include meta.html %}
 
-  <title>Drop In - {% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
-  
+  <title>{{ site.title }} - {% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+
   <link rel="icon" href="{{ "/images/drop-in-icon.png" | prepend: site.baseurl }}" type="image/png" />
 
   <link rel="stylesheet" href="{{ "/css/main.css?v3" | prepend: site.baseurl }}">
