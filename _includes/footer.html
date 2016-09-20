@@ -1,9 +1,21 @@
 <footer>
 
   <p class="footer--social-links">
-    <a href="#"><span class="icon-twitter"></span></a>
-    <a href="#"><span class="icon-facebook"></span></a>
-    <a href="#"><span class="icon-instagram"></span></a>
+    {% if site.twitter %}
+      <a href="https://twitter.com/{{ site.twitter }}">
+        <span class="icon-twitter"></span>
+      </a>
+    {% endif %}
+    {% if site.facebook %}
+      <a href="https://facebook.com/{{ site.facebook }}">
+        <span class="icon-facebook"></span>
+      </a>
+    {% endif %}
+    {% if site.instagram %}
+      <a href="https://instagram.com/{{ site.instagram }}">
+        <span class="icon-instagram"></span>
+      </a>
+    {% endif %}
   </p>
   <p><small>Created with a passion for a friendly game in Canada</small> 🇨🇦</p>
 </footer>
