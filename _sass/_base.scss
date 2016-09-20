@@ -299,3 +299,14 @@ a:not([data-link='no-style']) {
 footer {
   text-align: center;
 }
+
+.footer--social-links {
+  a {
+    border: 0;
+
+    &:hover {
+      border: 0;
+      color: $color4;
+    }
+  }
+}
