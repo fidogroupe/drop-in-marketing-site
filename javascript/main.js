@@ -20,7 +20,7 @@ headerMenu.onclick = function() {
 
 
 // Phone Scroll Goodness.
-  var feature1Start   = parseFloat(-247);
+  var feature1Start   = parseFloat(0);
   var feature1End     = parseFloat(-949) - 100;
   var feature2Start   = parseFloat(-949);
   var feature2End     = parseFloat(-1755) - 100;
@@ -29,25 +29,38 @@ headerMenu.onclick = function() {
   var feature4Start   = parseFloat(-2378);
   var feature4End     = parseFloat(-2989) - 100;
   var feature5Start   = parseFloat(-2989);
-  var feature5End     = parseFloat(-3480);
+  var feature5End     = parseFloat(-9999);
 
 function movePhone() {
   var fromTop = $('.home-page').offset().top - $(window).scrollTop();
 
   // Scrolls the phone till it needs to stop.
-  var initial = 100;
-  var scrolledPhone = parseFloat(initial) + parseFloat(fromTop);
-  var stopPoint = parseFloat(-472);
-  var startPoint = parseFloat(-3270);
-  var diff = (startPoint - stopPoint) * parseFloat(-1);
+  var phoneInitial = 100;
+  var scrolledPhone = parseFloat(phoneInitial) + parseFloat(fromTop);
+  var phoneStopPoint = parseFloat(-472);
+  var phoneStartPoint = parseFloat(-3270);
+  var phoneDiff = (phoneStartPoint - phoneStopPoint) * parseFloat(-1);
 
-  if (scrolledPhone < stopPoint && scrolledPhone > startPoint) {
-    scrolledPhone = stopPoint;
-  } else if (scrolledPhone <= startPoint) {
-    scrolledPhone = parseFloat(scrolledPhone + diff);
+  var screenInitial = 572;
+  var scrolledScreen = parseFloat(screenInitial) + parseFloat(fromTop);
+  var screenStopPoint = parseFloat(0);
+  var screenStartPoint = parseFloat(-2799);
+  var screenDiff = (screenStartPoint - screenStopPoint) * parseFloat(-1);
+
+  if (scrolledPhone < phoneStopPoint && scrolledPhone > phoneStartPoint) {
+    scrolledPhone = phoneStopPoint;
+  } else if (scrolledPhone <= phoneStartPoint) {
+    scrolledPhone = parseFloat(scrolledPhone + phoneDiff);
+  }
+
+  if (scrolledScreen < screenStopPoint && scrolledScreen > screenStartPoint) {
+    scrolledScreen = screenStopPoint;
+  } else if (scrolledScreen <= screenStartPoint) {
+    scrolledScreen = parseFloat(scrolledScreen + screenDiff);
   }
 
   $('.phone-image-container').css('transform', 'translateY(' + scrolledPhone + 'px)');
+  $('.js-screen').css('transform', 'translateY(' + scrolledScreen + 'px)');
 
   if (fromTop <= feature1Start && fromTop >= feature1End) {
     $('.js-feature-1 .js-screen').attr('data-feature-focus', 'true');
