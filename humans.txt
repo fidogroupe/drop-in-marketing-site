@@ -1,7 +1,9 @@
-
-
-
-
+Site:
+  Designed by: Peter Ramsing
+  Copy by: Peter Ramsing
+  Developed by: Peter Ramsing
+  http://peter.coffee
+  https://github.com/peterramsing
 
 
 Phone mockups from https://dribbble.com/shots/2847956-Sketch-Freebie-Subtle-Devices
