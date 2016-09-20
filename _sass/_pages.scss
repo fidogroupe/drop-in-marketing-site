@@ -112,7 +112,7 @@
   }
 }
 
-.iphone-image-container {
+.phone-image-container {
   display: none;
 
   @media (min-width: $large) {
@@ -156,13 +156,13 @@
   @media (min-width: $large) {
     position: fixed;
     top: 176px;
-    transition: opacity $iphone-transition-speed ease-in-out;
+    transition: opacity $phone-transition-speed ease-in-out;
     opacity: 0;
     margin-left: 557px;
     width: 266px;
 
     &[data-feature-focus='true'] {
-      transition: opacity $iphone-transition-speed ease-in-out;
+      transition: opacity $phone-transition-speed ease-in-out;
       opacity: 1;
     }
   }

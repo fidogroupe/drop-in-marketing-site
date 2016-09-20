@@ -47,7 +47,7 @@ function movePhone() {
     scrolledPhone = parseFloat(scrolledPhone + diff);
   }
 
-  $('.iphone-image-container').css('transform', 'translateY(' + scrolledPhone + 'px)');
+  $('.phone-image-container').css('transform', 'translateY(' + scrolledPhone + 'px)');
 
   if (fromTop <= feature1Start && fromTop >= feature1End) {
     $('.js-feature-1 .js-screen').attr('data-feature-focus', 'true');
