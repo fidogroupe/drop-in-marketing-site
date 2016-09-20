@@ -11,7 +11,9 @@
         {{ content }}
       </main>
 
-      {% include subscribe.html %}
+      {% if site.mailchimp == "visible" %}
+        {% include subscribe.html %}
+      {% endif %}
 
     </div>
 
