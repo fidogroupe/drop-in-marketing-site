@@ -242,10 +242,6 @@ a:not([data-link='no-style']) {
   width: 25px;
   height: 18px;
 
-  @media (max-width: #{$medium - 1}) {
-    cursor: pointer;
-  }
-
   .menu--bar {
     display: block;
     position: absolute;
