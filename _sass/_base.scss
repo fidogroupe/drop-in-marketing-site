@@ -141,7 +141,8 @@ a:not([data-link='no-style']) {
     transition: background-color $ui-transition-speed;
     background-color: transparent;
 
-    &:hover {
+    &:hover,
+    &[data-state='active'] {
       transition: background-color $ui-transition-speed;
       background-color: $color3;
 
@@ -270,27 +271,25 @@ a:not([data-link='no-style']) {
     top: 14px;
   }
 
-  @media (max-width: #{$medium - 1}) {
-    &[data-state='active'] {
-      .menu--bar:nth-child(1) {
-        top: 7px;
-        left: 50%;
-        width: 0%;
-      }
+  &[data-state='active'] {
+    .menu--bar:nth-child(1) {
+      top: 7px;
+      left: 50%;
+      width: 0%;
+    }
 
-      .menu--bar:nth-child(2) {
-        transform: rotate(45deg);
-      }
+    .menu--bar:nth-child(2) {
+      transform: rotate(45deg);
+    }
 
-      .menu--bar:nth-child(3) {
-        transform: rotate(-45deg);
-      }
+    .menu--bar:nth-child(3) {
+      transform: rotate(-45deg);
+    }
 
-      .menu--bar:nth-child(4) {
-        top: 7px;
-        left: 50%;
-        width: 0%;
-      }
+    .menu--bar:nth-child(4) {
+      top: 7px;
+      left: 50%;
+      width: 0%;
     }
   }
 }

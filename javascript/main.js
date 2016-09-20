@@ -16,6 +16,7 @@ var headerMenu = document.getElementsByClassName('site-header--menu')[0];
 headerMenu.onclick = function() {
   toggleActiveState('site-header--links');
   toggleActiveState('site-header--menu');
+  toggleActiveState('site-header');
 };
 
 
