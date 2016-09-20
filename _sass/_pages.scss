@@ -118,21 +118,14 @@
   @media (min-width: $large) {
     display: block;
     position: fixed;
-    top: 100px;
     right: 50%;
+    transform: translateY(100px);
     margin-right: - ($large - 20px) / 2;
     padding: 0 20px;
 
     img {
       float: right;
-      transition: opacity $iphone-transition-speed ease-in-out;
-      opacity: 0;
       width: 300px;
-
-      &[data-state='active'] {
-        transition: opacity $iphone-transition-speed ease-in-out;
-        opacity: 1;
-      }
     }
   }
 }

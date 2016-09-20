@@ -18,8 +18,8 @@ headerMenu.onclick = function() {
   toggleActiveState('site-header--menu');
 };
 
-// scrolling goodness
 
+// Phone Scroll Goodness.
   var feature1Start   = parseFloat(-247);
   var feature1End     = parseFloat(-949) - 100;
   var feature2Start   = parseFloat(-949);
@@ -31,15 +31,23 @@ headerMenu.onclick = function() {
   var feature5Start   = parseFloat(-2989);
   var feature5End     = parseFloat(-3480);
 
-
-$(window).scroll(function() {
+function movePhone() {
   var fromTop = $('.home-page').offset().top - $(window).scrollTop();
 
-  if (fromTop <= feature1Start && fromTop >= feature5End) {
-    $('.js-iphone-image').attr('data-state', 'active');
-  } else {
-    $('.js-iphone-image').attr('data-state', '');
+  // Scrolls the phone till it needs to stop.
+  var initial = 100;
+  var scrolledPhone = parseFloat(initial) + parseFloat(fromTop);
+  var stopPoint = parseFloat(-472);
+  var startPoint = parseFloat(-3270);
+  var diff = (startPoint - stopPoint) * parseFloat(-1);
+
+  if (scrolledPhone < stopPoint && scrolledPhone > startPoint) {
+    scrolledPhone = stopPoint;
+  } else if (scrolledPhone <= startPoint) {
+    scrolledPhone = parseFloat(scrolledPhone + diff);
   }
+
+  $('.iphone-image-container').css('transform', 'translateY(' + scrolledPhone + 'px)');
 
   if (fromTop <= feature1Start && fromTop >= feature1End) {
     $('.js-feature-1 .js-screen').attr('data-feature-focus', 'true');
@@ -70,4 +78,11 @@ $(window).scroll(function() {
   } else {
     $('.js-feature-5 .js-screen').attr('data-feature-focus', '');
   }
+}
+
+$(function() {
+  movePhone();
+});
+$(window).scroll(function() {
+  movePhone();
 })
