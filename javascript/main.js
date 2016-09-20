@@ -53,10 +53,15 @@ function movePhone() {
     scrolledPhone = parseFloat(scrolledPhone + phoneDiff);
   }
 
-  if (scrolledScreen < screenStopPoint && scrolledScreen > screenStartPoint) {
-    scrolledScreen = screenStopPoint;
-  } else if (scrolledScreen <= screenStartPoint) {
-    scrolledScreen = parseFloat(scrolledScreen + screenDiff);
+  // Makes the screen fixing only happen on large layout.
+  if ($(window).width() > 900) {
+    if (scrolledScreen < screenStopPoint && scrolledScreen > screenStartPoint) {
+      scrolledScreen = screenStopPoint;
+    } else if (scrolledScreen <= screenStartPoint) {
+      scrolledScreen = parseFloat(scrolledScreen + screenDiff);
+    }
+  } else {
+    scrolledScreen = 0;
   }
 
   $('.phone-image-container').css('transform', 'translateY(' + scrolledPhone + 'px)');
@@ -99,3 +104,6 @@ $(function() {
 $(window).scroll(function() {
   movePhone();
 })
+$(window).resize(function() {
+  movePhone()
+});
