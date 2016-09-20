@@ -12,3 +12,7 @@
   <link rel="stylesheet" href="{{ "/css/main.css?v3" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 </head>
+
+{% if jekyll.environment == "production" %}
+ {% include analytics.html %}
+{% endif %}
